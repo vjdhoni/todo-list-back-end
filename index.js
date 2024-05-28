@@ -12,8 +12,8 @@ const connectToMongo = async () => {
         useUnifiedTopology: false,
         // authSource: 'admin',
     })
-        .then(res => console.log(`Mongodb connect successfully`))
-        .catch(err => console.log(`Mongodb connection error: ${err}`))
+        // .then(res => console.log(`Mongodb connect successfully`))
+        // .catch(err => console.log(`Mongodb connection error: ${err}`))
 }
 
 
@@ -25,6 +25,6 @@ app.use('/api/v1/task', taskRouter)
 const PORT = process.env.PORT || 8080
 
 app.listen(PORT, () => {
-    console.log(`server start successfully PORT: ${PORT}`);
+    // console.log(`server start successfully PORT: ${PORT}`);
     connectToMongo()
 })
